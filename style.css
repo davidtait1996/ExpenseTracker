@@ -1,0 +1,57 @@
+h1 {
+    font-size: 100px;
+    color: black;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+    font-size: 45px;
+    color: green;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nameForm{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dateForm{
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+}
+
+.amountForm{
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+}
+
+.dateAmountRow {
+    text-align: center;
+}
+
+.submitButton{
+    text-align: center;
+}
+
+.dataTable {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px solid black;
+    width: 50%;
+}
+
+table, th, td{
+    border: 1px solid black;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+tr:nth-child(even){
+    background-color: black;
+    color: white;
+})
