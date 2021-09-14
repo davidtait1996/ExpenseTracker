@@ -1,15 +1,17 @@
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
 h1 {
     font-size: 100px;
     color: black;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
 }
 
 h2 {
     font-size: 45px;
     color: green;
     text-align: center;
-    font-family: 'Times New Roman', Times, serif;
 }
 .nameForm{
     margin: 0 auto;
@@ -36,22 +38,26 @@ h2 {
     text-align: center;
 }
 
-.dataTable {
-    margin-left: auto;
-    margin-right: auto;
+button {
+    background-color: green;
+    border-color: rgb(83, 170, 83);
+    border-radius: 5px;
+    color: white;
     text-align: center;
-    border: 1px solid black;
-    width: 50%;
 }
 
+
 table, th, td{
-    border: 1px solid black;
-    width: 50%;
+    border: 1px solid rgb(60, 60, 60);
+    width: 45%;
     margin-left: auto;
     margin-right: auto;
+    padding: 5px;
 }
 
 tr:nth-child(even){
-    background-color: black;
+    background-color: rgb(128, 128, 128);
     color: white;
 }
+
+tr:hover {background-color:rgb(232, 204, 255)}

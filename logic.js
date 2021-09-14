@@ -7,7 +7,9 @@ var dataArray = [];
 
 var dataTable = document.getElementById('dataTable');
 
-
+var formatter = new Intl.NumberFormat(undefined, {
+    style: 'currency',
+    currency: 'USD'});
 
 function printTable(){
     var newRow;
@@ -15,7 +17,7 @@ function printTable(){
         newRow = dataTable.insertRow(i+1);
         newRow.insertCell(0).innerHTML = dataArray[i].name;
         newRow.insertCell(1).innerHTML = dataArray[i].date;
-        newRow.insertCell(2).innerHTML = "$" + dataArray[i].amount;
+        newRow.insertCell(2).innerHTML = dataArray[i].amount;
         newRow.insertCell(3).innerHTML =  "<button type='button' onClick='removeFromList(" + (i) + ")'>❌</button>";
     }
 }
@@ -26,11 +28,25 @@ function deleteTable(){
     }
 }
 
+function checkLegit(){
+    return  form[0].value != "" 
+            && form[1].value != "" 
+            && form[2].value != "" 
+            && !isNaN(form[2].value) 
+}
+
+function clearForms(){
+    for(var i=0; i < form.length; i++){
+        form[i].value = "";
+    }
+}
+
 function addToList() {
-    if(form[0].value != "" && form[1].value != "" && form[2].value != "" && !isNaN(form[2].value)){
+    if(checkLegit()){
         deleteTable();
-        dataArray.push({"name": form[0].value, "date": form[1].value, "amount": form[2].value});
+        dataArray.push({"name": form[0].value, "date": form[1].value, "amount": formatter.format(form[2].value)});
         printTable();
+        clearForms();
     }
 }
 
