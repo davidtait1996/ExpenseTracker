@@ -30,6 +30,7 @@ function deleteTable(){
 function addToList() {
     deleteTable();
     dataArray.push({"name": form[0].value, "date": form[1].value, "amount": form[2].value});
+    printTable();
 }
 
 function removeFromList(index) {
