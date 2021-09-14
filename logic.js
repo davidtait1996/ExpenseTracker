@@ -1,7 +1,3 @@
-
-
-
-
 const form = [  document.getElementById('name'), 
                 document.getElementById('date'), 
                 document.getElementById('amount')
@@ -32,20 +28,13 @@ function deleteTable(){
 
 
 function addToList() {
-    console.log(dataTable.rows.length);
     deleteTable();
-    console.log(dataTable.rows.length);
     dataArray.push({"name": form[0].value, "date": form[1].value, "amount": form[2].value});
-    printTable();
-    console.log(dataTable.rows.length);
 }
 
 function removeFromList(index) {
-    console.log(dataTable.rows.length);
     deleteTable();
-    console.log(dataTable.rows.length);
     dataArray.splice(index, 1);
     printTable();
-    console.log(dataTable.rows.length);
 }
 
