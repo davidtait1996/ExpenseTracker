@@ -7,6 +7,8 @@ var dataArray = [];
 
 var dataTable = document.getElementById('dataTable');
 
+
+
 function printTable(){
     var newRow;
     for (var i = 0; i < (dataArray.length); i++){
@@ -19,18 +21,17 @@ function printTable(){
 }
 
 function deleteTable(){
-    if(dataTable.rows.length > 0){
-        for(var i = dataArray.length; i > 0; i--){
-            dataTable.deleteRow(i);
-        }
+    for(var i = dataTable.rows.length-1; i > 0; i--){
+        dataTable.deleteRow(i);
     }
 }
 
-
 function addToList() {
-    deleteTable();
-    dataArray.push({"name": form[0].value, "date": form[1].value, "amount": form[2].value});
-    printTable();
+    if(form[0].value != "" && form[1].value != "" && form[2].value != "" && !isNaN(form[2].value)){
+        deleteTable();
+        dataArray.push({"name": form[0].value, "date": form[1].value, "amount": form[2].value});
+        printTable();
+    }
 }
 
 function removeFromList(index) {
